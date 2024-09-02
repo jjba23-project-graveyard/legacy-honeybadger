@@ -1,0 +1,238 @@
+---
+# Copyright © 2023 Josep Bigorra
+#
+# This file is part of HoneyBadger.
+# HoneyBadger is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation,
+#   either version 3 of the License, or (at your option) any later version.
+#
+# HoneyBadger is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+#   without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# See the GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License along with HoneyBadger.
+# If not, see <https://www.gnu.org/licenses/>.
+#
+# Two component badge tasks
+leftRightBadgeTasks:
+  - leftBadgeParameters:
+      textContents: Scala
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      width: 80
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/scala.svg"
+    rightBadgeParameters:
+      textContents: 2.13.8
+      textColor: text-catppuccin-mocha
+      backgroundColor: red-catppuccin-latte
+      width: 68
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+    destinationFilePath: "./dist/scala.png"
+    destinationFileExtension: "png"
+
+  - leftBadgeParameters:
+      textContents: Java
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      width: 76
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/java.svg"
+    rightBadgeParameters:
+      textContents: v17
+      textColor: text-catppuccin-mocha
+      backgroundColor: "#871d1a"
+      width: 60
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+    destinationFilePath: "./dist/java.png"
+    destinationFileExtension: "png"
+
+  - leftBadgeParameters:
+      textContents: openSUSE
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      width: 110
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        width: 20
+        height: 20
+        filePath: "./resources/icons/opensuse.svg"
+    rightBadgeParameters:
+      textContents: Tumbleweed
+      textColor: crust-catppuccin-mocha
+      backgroundColor: "#73ba25"
+      width: 110
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+    destinationFilePath: "./dist/opensuse-tumbleweed.png"
+    destinationFileExtension: "png"
+
+  - leftBadgeParameters:
+      textContents: Go
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      width: 66
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        width: 16
+        height: 12
+        filePath: "./resources/icons/go.svg"
+    rightBadgeParameters:
+      textContents: v1.19
+      textColor: mantle-catppuccin-mocha
+      backgroundColor: blue-catppuccin-mocha
+      backgroundColorBrightnessModifier: -12
+      width: 64
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+    destinationFilePath: "./dist/go.png"
+    destinationFileExtension: "png"
+
+  - leftBadgeParameters:
+      textContents: Spring Boot
+      textColor: text-catppuccin-mocha
+      width: 126
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/spring.svg"
+    rightBadgeParameters:
+      textContents: 2
+      textColor: mantle-catppuccin-mocha
+      backgroundColor: green-catppuccin-mocha
+      backgroundColorBrightnessModifier: -12
+      width: 42
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+    destinationFilePath: "./dist/spring.png"
+    destinationFileExtension: "png"
+
+  - leftBadgeParameters:
+      textContents: Debian
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      width: 94
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/debian.svg"
+    rightBadgeParameters:
+      textContents: testing
+      textColor: text-catppuccin-mocha
+      backgroundColor: "#982e2b"
+      width: 68
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+    destinationFilePath: "./dist/debian.png"
+    destinationFileExtension: "png"
+
+# SINGLE BADGE TASKS
+singleBadgeTasks:
+  - badgeParameters:
+      textContents: Python
+      textColor: text-catppuccin-mocha
+      backgroundColor: blue-catppuccin-latte
+      backgroundColorBrightnessModifier: -12
+      fontSize: 13
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/python.svg"
+    destinationFilePath: "./dist/python.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      textContents: Haskell
+      textColor: text-catppuccin-mocha
+      backgroundColor: "#360078"
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/haskell.svg"
+    destinationFilePath: "./dist/haskell.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      textContents: Cabal
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/cabal.svg"
+    destinationFilePath: "./dist/cabal.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      width: 158
+      textContents: GNU Emacs
+      textColor: text-catppuccin-mocha
+      backgroundColor: mauve-catppuccin-mocha
+      backgroundColorBrightnessModifier: -30
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/emacs.svg"
+    destinationFilePath: "./dist/emacs.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      textContents: Makefile
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/gnu.svg"
+    destinationFilePath: "./dist/makefile.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      textContents: Dockerfile
+      textColor: text-catppuccin-mocha
+      backgroundColor: blue-catppuccin-latte
+      backgroundColorBrightnessModifier: -10
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/docker.svg"
+    destinationFilePath: "./dist/dockerfile.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      width: 160
+      textContents: Docker Compose
+      textColor: text-catppuccin-mocha
+      backgroundColor: blue-catppuccin-latte
+      backgroundColorBrightnessModifier: -10
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/docker.svg"
+    destinationFilePath: "./dist/docker-compose.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      width: 194
+      textContents: Common Lisp (SBCL)
+      textColor: text-catppuccin-mocha
+      backgroundColor: "#322D31"
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/common-lisp.svg"
+    destinationFilePath: "./dist/common-lisp-sbcl.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      width: 174
+      textContents: GNU GPL v3+
+      textColor: crust-catppuccin-mocha
+      backgroundColor: text-catppuccin-mocha
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/scales.svg"
+    destinationFilePath: "./dist/gnu-gpl-v3.png"
+    destinationFileExtension: "png"
+
+  - badgeParameters:
+      width: 156
+      textContents: Donderwolk
+      textColor: text-catppuccin-mocha
+      backgroundColor: crust-catppuccin-mocha
+      customFontFilePath: "./resources/fonts/Roboto-Bold.ttf"
+      iconParameters:
+        filePath: "./resources/icons/lightning.svg"
+    destinationFilePath: "./dist/donderwolk.png"
+    destinationFileExtension: "png"

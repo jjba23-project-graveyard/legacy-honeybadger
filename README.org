@@ -1,0 +1,111 @@
+#+title: Honeybadger
+
+* Honeybadger
+
+[[./dist/scala.png]]
+
+Scala CLI utility that aims to generate beautiful images as badges to embed in your favourite places.
+
+This project mostly aims to be used to add beautiful badges to your org or markdown files, or websites.
+
+Lots of options are possible, but sane defaults are provided. We support many popular technologies and brands, but everything is designed so that it is very easy to add your own.
+
+Feel free to use the content in =dist= and =resources= at will.
+
+** Examples
+If you would like to see some examples showing the badge generation possibilities, take a look at [[./resources/examples/BADGES.md][the BADGES.md file]].
+
+
+** License
+This software is distributed under the GNU General Public License (GPL) v3.0 or later.
+
+[[./resources/branding/mellivora-capensis.jpg]]
+
+** Disclaimer
+The Honeybadger project and its authors and contributors do not own the logos or branding used to create the badges, we simply provide a convenient way to use them. The copyright of all imagery and related is property of the respective authors.
+
+** Usage
+This project has been envisioned as a CLI-first utility. In the future this might grow in other directions, and we are open for it, provided there is a use-case. The codebase is quite adaptable and should be easy to modify.
+
+As of now, this utility can accept input either programatically or via config files.
+
+** Colors
+
+HoneyBadger includes several predefined colors, like Catppuccin, that can be accessed via slug.
+
+See all the possibilities [[./src/main/scala/Palette.scala][here in the code]].
+You can also specify custom colors, via hex code, e.g. #eeeeee or #fd39ab
+
+** Using with config files
+
+TODO: Compile utility to native binary and bundle license + instructions
+
+You can run this utility with SBT installed and you must specify one or more config files (JSON and/or YAML):
+
+#+begin_src shell :tangle no
+# single file
+sbt "run ./resources/examples/tasks.yaml"
+# multiple files and formats
+sbt "run ./resources/examples/tasks.json ./resources/examples/tasks.yaml"
+#+end_src
+
+For the best way to understand the possibilities in the YAML / JSON file, please reference the source code where we defined the data models at [[./src/main/scala/Entities.scala][./src/main/scala/Entities.scala]] .
+
+An example YAML file is shown below.
+Alternatively see [[./resources/examples/tasks.yaml][the example file]] in the repo.
+
+#+begin_src yaml
+
+leftRightBadgeTasks:
+  - leftBadgeParameters:
+      textContents: SCALA
+      textColor: text-catppuccin-mocha
+      backgroundColor: mantle-catppuccin-mocha
+      width: 76
+      height: 24
+      fontSize: 12
+      backgroundColorBrightnessModifier:
+      customFontFilePath: "./resources/fonts/SofiaSans-Black.ttf"
+      iconParameters:
+        width: 16
+        height: 16
+        filePath: "./resources/icons/scala.svg"
+    rightBadgeParameters:
+      textContents: v2.13.8
+      textColor: text-catppuccin-mocha
+      backgroundColor: red-catppuccin-latte
+      width: 50
+      height: 24
+      fontSize: 12
+      backgroundColorBrightnessModifier:
+      customFontFilePath: "./resources/fonts/SofiaSans-Black.ttf"
+      iconParameters:
+    destinationFilePath: "./dist/scala.png"
+    destinationFileExtension: png
+singleBadgeTasks:
+  - badgeParameters:
+      textContents: HASKELL
+      textColor: text-catppuccin-mocha
+      backgroundColor: mauve-catppuccin-latte
+      backgroundColorBrightnessModifier: -20
+      customFontFilePath: "./resources/fonts/SofiaSans-Black.ttf"
+      iconParameters:
+        filePath: "./resources/icons/haskell.svg"
+    destinationFilePath: "./dist/haskell.png"
+    destinationFileExtension: png
+
+#+end_src
+
+
+** Using Programatically
+
+Take a look at the [[./resources/examples/tasks.scala][tasks.scala]] to get an idea of how the utility can be used with plain Scala code.
+
+For advanced usage look at [[./src/main/scala/Main.scala][Main.scala]] and [[./src/main/scala/HoneyBadger.scala][HoneyBadger.scala]] .
+
+
+** Supported formats
+
+As of now, the utility supports exporting badges to: PNG, JPEG, others ?
+
+As of now, the icons to use in the badge can be: SVG, PNG, JPEG, others ?
